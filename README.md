@@ -36,3 +36,6 @@ pkg-config --libs  raylib
 ```
 
 This will include the raylib library into the build
+
+
+For Makefile instructions, see [this amazing guide](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/)
