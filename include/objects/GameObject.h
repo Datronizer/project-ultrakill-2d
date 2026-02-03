@@ -4,8 +4,9 @@ class GameObject
 {
     public:
         GameObject();
-        void update();
-        void draw();
+
+        Vector2 getPos();
+        void setPos(Vector2);
 
     private:
         Vector2 m_pos;

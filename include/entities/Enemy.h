@@ -1,0 +1,9 @@
+#include <raylib.h>
+#include "Entity.h"
+
+class Enemy : Entity
+{
+    public:
+        Enemy();
+    
+};
