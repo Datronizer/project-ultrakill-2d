@@ -25,7 +25,7 @@ class Game
 
 
         Player m_player;
-        Enemy m_enemies;
+        Enemy m_enemy;
 
         float m_gravity_factor;      
 };

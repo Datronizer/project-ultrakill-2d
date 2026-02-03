@@ -1,3 +1,4 @@
+#include <raylib.h>
 #include "entities/Player.h"
 
 Player::Player()
@@ -10,7 +11,11 @@ Player::Player(Vector2 pos)
 {
 }
 
-// void Player::move()
+void Player::draw()
+{
+    DrawRectangle(m_pos.x, m_pos.y, 100, 100, GREEN);
+}
+ // void Player::move()
 // {
 
 // }

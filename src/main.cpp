@@ -1,6 +1,6 @@
 #include <iostream>
 #include <raylib.h>
-#include "../include/Game.h"
+#include "../include/core/Game.h"
 
 using namespace std;
 

@@ -5,9 +5,11 @@ class GameObject
     public:
         GameObject();
 
-        Vector2 getPos();
-        void setPos(Vector2);
+        virtual void draw() = 0;
+        virtual void update() = 0;
+
+        ~GameObject();
 
     private:
-        Vector2 m_pos;
+        // Vector2 m_pos;
 };

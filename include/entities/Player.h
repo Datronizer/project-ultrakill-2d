@@ -7,6 +7,9 @@ class Player : public Entity
         Player();
         Player(Vector2 pos);
 
+        void update();
+        void draw();
+
     private:
         
 };
