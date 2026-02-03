@@ -1,13 +1,15 @@
-#include "Game.h"
+#include "core/Game.h"
 
 Game::Game()
 {
+    
 }
 
 
 void Game::update()
 {
     // this->m_player.
+
 }
 
 void Game::draw()

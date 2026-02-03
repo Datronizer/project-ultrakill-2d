@@ -8,10 +8,12 @@ SRC_DIR = src
 INCLUDE_DIR = include
 BUILD_DIR = build
 
-# Find all the .cpp files in the src directory
-SRCS = $(wildcard $(SRC_DIR)/*.cpp) \
-		$(wildcard $(SRC_DIR)/objects/*.cpp) \
-        $(wildcard $(SRC_DIR)/entities/*.cpp)
+# # Find all the .cpp files in the src directory
+# SRCS = $(wildcard $(SRC_DIR)/*.cpp) \
+# 		$(wildcard $(SRC_DIR)/objects/*.cpp) \
+#         $(wildcard $(SRC_DIR)/entities/*.cpp)
+# Automated cpp search
+SRCS = $(shell find $(SRC_DIR) -name '*.cpp')
 
 # Create the object files
 OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SRCS))

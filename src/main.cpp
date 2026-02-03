@@ -1,6 +1,6 @@
 #include <iostream>
 #include <raylib.h>
-#include "../include/entities/Player.h"
+#include "../include/Game.h"
 
 using namespace std;
 
@@ -10,6 +10,7 @@ int main()
     const int screenWidth = 800;
     const int screenHeight = 450;
 
+    Game game;
     InitWindow(screenWidth, screenHeight, "Project 2D Ultrakill");
 
     // Init player
@@ -22,6 +23,9 @@ int main()
     // Main game loop
     while (!WindowShouldClose())
     {
+        // Update
+        game.update();
+
         // --- Update goes here
         // if (IsKeyDown(KEY_RIGHT)) player.setPos(Vector2{ player.getPos().x + 5, player.getPos().y });
         // if (IsKeyDown(KEY_LEFT)) player.setPos(Vector2{ player.getPos().x - 5, player.getPos().y });
