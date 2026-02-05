@@ -1,1 +1,6 @@
 /build
+
+# VS2022 stuff
+CppProperties.json
+
+/.vs
