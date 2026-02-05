@@ -2,5 +2,7 @@
 
 # VS2022 stuff
 CppProperties.json
-
 /.vs
+
+# VS Code stuff
+/.vscode
