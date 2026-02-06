@@ -11,11 +11,12 @@ Player::Player(Vector2 pos)
 {
 }
 
+void Player::update()
+{
+    
+}
+
 void Player::draw()
 {
     DrawRectangle(m_pos.x, m_pos.y, 100, 100, GREEN);
 }
- // void Player::move()
-// {
-
-// }

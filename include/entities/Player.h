@@ -1,3 +1,7 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
+
 #include <raylib.h>
 #include "Entity.h"
 
@@ -13,3 +17,6 @@ class Player : public Entity
     private:
         
 };
+
+
+#endif // PLAYER_H

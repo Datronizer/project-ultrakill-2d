@@ -1,3 +1,7 @@
+#ifndef PHYSICSSYSTEM_H
+#define PHYSICSSYSTEM_H
+
+
 #include <raylib.h>
 #include "entities/Entity.h"
 
@@ -14,3 +18,5 @@ class PhysicsSystem
 
         void applyGravity(Entity _entity);
 };
+
+#endif // PHYSICSSYSTEM_H

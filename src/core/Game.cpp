@@ -4,6 +4,10 @@ Game::Game()
 {
     Entity *player = new Player();
     Entity *enemy = new Enemy();
+
+
+    // PhysicsSystem physics;
+    // LevelManager level_manager;
 }
 
 

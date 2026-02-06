@@ -25,6 +25,7 @@ int main()
     {
         // Update
         game.update();
+        game.draw();
 
         // --- Update goes here
         // if (IsKeyDown(KEY_RIGHT)) player.setPos(Vector2{ player.getPos().x + 5, player.getPos().y });

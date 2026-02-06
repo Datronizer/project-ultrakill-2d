@@ -1,3 +1,6 @@
+#ifndef ENEMY_H
+#define ENEMY_H
+
 #include <raylib.h>
 #include "Entity.h"
 
@@ -10,3 +13,6 @@ class Enemy : public Entity
         void draw();
     
 };
+
+
+#endif // ENEMY_H

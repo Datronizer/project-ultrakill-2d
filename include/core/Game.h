@@ -1,3 +1,6 @@
+#ifndef GAME_H
+#define GAME_H
+
 #include <raylib.h>
 
 #include "entities/Player.h"
@@ -17,15 +20,17 @@ class Game
         Player getPlayer();  // For now, this game will only have 1 player, so getPlayer just... gets player
 
     private:
-        // Systems
-        PhysicsSystem m_physics;
+        // // Systems
+        // PhysicsSystem m_physics;
         
-        // Managers
-        LevelManager m_level_manager;
+        // // Managers
+        // LevelManager m_level_manager;
 
 
         Player m_player;
         Enemy m_enemy;
 
-        float m_gravity_factor;      
+        // float m_gravity_factor;      
 };
+
+#endif // GAME_H
