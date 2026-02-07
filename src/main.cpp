@@ -1,14 +1,15 @@
 #include <iostream>
 #include <raylib.h>
 #include "../include/core/Game.h"
+#include "../include/core/Constants.h"
 
 using namespace std;
 
 int main()
 {
     // Initialization
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int screenWidth = Constants::SCREEN_WIDTH;
+    const int screenHeight = Constants::SCREEN_HEIGHT;
 
     Game game;
     InitWindow(screenWidth, screenHeight, "Project 2D Ultrakill");
@@ -17,7 +18,7 @@ int main()
     // Player player;
     // player.setPos(Vector2{ (float)screenWidth / 2, (float)screenHeight / 2 });
 
-    SetTargetFPS(60);
+    SetTargetFPS(Constants::TARGET_FPS);
 
 
     // Main game loop

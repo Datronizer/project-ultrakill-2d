@@ -11,6 +11,8 @@ class Entity : public GameObject
     public:
         Entity();
 
+        int m_health = 100;
+
         int getID();
         void setID(const int &id);
         

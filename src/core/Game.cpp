@@ -28,6 +28,7 @@ void Game::update()
     if (IsKeyDown(KEY_DOWN)) this->m_player.m_pos.y += 5;
 
     if (IsKeyPressed(KEY_SPACE)) m_entity_manager.addEntity(std::make_unique<Enemy>());
+    if (IsKeyPressed(KEY_BACKSPACE)) m_entity_manager.removeEntity();
 
     // Physics
     m_physics.update(m_entity_manager);

@@ -14,10 +14,29 @@ void EntityManager::addEntity(std::unique_ptr<Entity> entity)
 
     m_entities.push_back(std::move(entity));
 }
+void EntityManager::removeEntity()
+{
+    if (m_entities.empty()) {
+        DrawText("No entities to remove", 10, 10, 20, RED);
+        return;
+    };
+    // TODO
+    m_entities.pop_back();
+}
 void EntityManager::removeEntity(Entity &entity)
 {
+    if (m_entities.empty()) {
+        DrawText("No entities to remove", 10, 10, 20, RED);
+        return;
+    };
+
     // TODO
     // m_entities.erase()
+}
+
+void EntityManager::removeAllEntities()
+{
+    m_entities.clear();
 }
 
 void EntityManager::addPlayer(const Player &player)

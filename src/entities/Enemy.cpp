@@ -1,5 +1,6 @@
 #include "entities/Enemy.h"
 #include <cmath>
+#include <string>
 
 
 Enemy::Enemy()
@@ -8,6 +9,8 @@ Enemy::Enemy()
 
     m_pos.x = 500 + randDist;
     m_pos.y = GetRandomValue(0, 200);
+
+
 }
 
 void Enemy::update()
@@ -19,8 +22,7 @@ void Enemy::draw()
 {
     // Assume the width and height of the rectangle is always 25
     DrawRectangle(m_pos.x, m_pos.y, 25, 25, RED);
-
-    
+    DrawText(std::to_string(getID()).c_str(), m_pos.x, m_pos.y, 20, BLACK);
 }
 
 void Enemy::lookAtPlayer(const Vector2 &player_pos)

@@ -12,7 +12,9 @@ class EntityManager
         EntityManager();
 
         void addEntity(std::unique_ptr<Entity> entity);
+        void removeEntity();
         void removeEntity(Entity &entity);
+        void removeAllEntities();
 
         void addPlayer(const Player &player);
         void removePlayer();  // I don't know when we would ever need this but whatevs
