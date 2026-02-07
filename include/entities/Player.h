@@ -10,6 +10,7 @@ class Player : public Entity
     public:
         Player();
         Player(Vector2 pos);
+        ~Player();
 
         void update();
         void draw();

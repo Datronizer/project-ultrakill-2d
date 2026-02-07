@@ -15,9 +15,12 @@ class GameObject
         Vector2 m_pos;
         float m_rotation;
 
+        Texture2D m_texture;
+
         ~GameObject();
 
     private:
+        
 };
 
 

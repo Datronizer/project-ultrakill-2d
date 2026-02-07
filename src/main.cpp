@@ -11,8 +11,8 @@ int main()
     const int screenWidth = Constants::SCREEN_WIDTH;
     const int screenHeight = Constants::SCREEN_HEIGHT;
 
-    Game game;
     InitWindow(screenWidth, screenHeight, "Project 2D Ultrakill");
+    Game game;
 
     // Init player
     // Player player;
@@ -29,10 +29,6 @@ int main()
         game.draw();
 
         // --- Update goes here
-        // if (IsKeyDown(KEY_RIGHT)) player.setPos(Vector2{ player.getPos().x + 5, player.getPos().y });
-        // if (IsKeyDown(KEY_LEFT)) player.setPos(Vector2{ player.getPos().x - 5, player.getPos().y });
-        // if (IsKeyDown(KEY_UP)) player.setPos(Vector2{ player.getPos().x, player.getPos().y - 5 });
-        // if (IsKeyDown(KEY_DOWN)) player.setPos(Vector2{ player.getPos().x, player.getPos().y + 5 });
         // ---
 
         // player.update();
