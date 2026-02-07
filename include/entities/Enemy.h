@@ -11,7 +11,11 @@ class Enemy : public Entity
 
         void update();
         void draw();
+
+        void lookAtPlayer(const Vector2 &player_pos);
     
+    private:
+        
 };
 
 

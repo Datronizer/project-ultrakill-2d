@@ -13,6 +13,7 @@ class GameObject
         virtual void update() = 0;
 
         Vector2 m_pos;
+        float m_rotation;
 
         ~GameObject();
 

@@ -5,14 +5,23 @@
 #include <raylib.h>
 #include "objects/GameObject.h"
 
+
 class Entity : public GameObject
 {
     public:
         Entity();
+
+        int getID();
+        void setID(const int &id);
         
+        Vector2 getPosition();
+        void setPosition(const Vector2 &pos);
+
+        float getRotation();
+        void setRotation(const float &angle);
 
     private:
-        
+        unsigned int m_id;
 };
 
 

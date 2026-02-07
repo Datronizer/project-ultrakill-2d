@@ -1,3 +1,6 @@
+#ifndef LEVELMANAGER_H
+#define LEVELMANAGER_H
+
 class LevelManager
 {
     public:
@@ -9,3 +12,5 @@ class LevelManager
     private:
         
 };
+
+#endif // LEVELMANAGER_H

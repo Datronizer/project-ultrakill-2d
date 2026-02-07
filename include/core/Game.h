@@ -7,6 +7,7 @@
 #include "entities/Enemy.h"
 #include "systems/PhysicsSystem.h"
 #include "core/LevelManager.h"
+#include "core/EntityManager.h"
 
 
 class Game
@@ -25,10 +26,11 @@ class Game
         
         // // Managers
         // LevelManager m_level_manager;
+        EntityManager m_entity_manager;
 
-
+        // Entities
         Player m_player;
-        Enemy m_enemy;
+        
 
         // float m_gravity_factor;      
 };
