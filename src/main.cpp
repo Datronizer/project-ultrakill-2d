@@ -24,7 +24,7 @@ int main()
     while (!WindowShouldClose())
     {
         // Update
-        game.update();
+        game.update();  // TODO: this might do weird things with physics since its not fixed timestep
         game.draw();
 
         // --- Update goes here

@@ -10,13 +10,13 @@ class PhysicsSystem
     public:
         PhysicsSystem();
 
-        void update();
+        void update(class EntityManager &manager);
         void draw();
 
     private:
         float m_gravity_factor;
 
-        void applyGravity(Entity _entity);
+        void applyGravity(Entity &entity);
 };
 
 #endif // PHYSICSSYSTEM_H

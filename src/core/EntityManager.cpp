@@ -1,5 +1,6 @@
 #include "core/EntityManager.h"
 
+
 EntityManager::EntityManager()
 {
     id_counter = 0;
@@ -19,6 +20,15 @@ void EntityManager::removeEntity(Entity &entity)
     // m_entities.erase()
 }
 
+void EntityManager::addPlayer(const Player &player)
+{
+    m_player = player;
+}
+void EntityManager::removePlayer()
+{
+    // TODO
+}
+
 void EntityManager::update()
 {
     for (auto &entity : m_entities)
@@ -32,4 +42,14 @@ void EntityManager::draw()
     {
         if (entity) entity->draw(); 
     }
+}
+
+std::vector<std::unique_ptr<Entity>> &EntityManager::getEntities()
+{
+    // TODO: insert return statement here
+    return m_entities;
+}
+const Player &EntityManager::getPlayer() const
+{
+    return m_player;
 }

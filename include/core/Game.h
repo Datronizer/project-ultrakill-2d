@@ -22,7 +22,7 @@ class Game
 
     private:
         // // Systems
-        // PhysicsSystem m_physics;
+        PhysicsSystem m_physics;
         
         // // Managers
         // LevelManager m_level_manager;
@@ -30,7 +30,7 @@ class Game
 
         // Entities
         Player m_player;
-        
+
 
         // float m_gravity_factor;      
 };

@@ -17,7 +17,10 @@ void Enemy::update()
 
 void Enemy::draw()
 {
+    // Assume the width and height of the rectangle is always 25
     DrawRectangle(m_pos.x, m_pos.y, 25, 25, RED);
+
+    
 }
 
 void Enemy::lookAtPlayer(const Vector2 &player_pos)

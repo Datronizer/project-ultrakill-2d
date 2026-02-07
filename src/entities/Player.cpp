@@ -1,4 +1,5 @@
 #include <raylib.h>
+#include <raymath.h>
 #include "entities/Player.h"
 
 Player::Player()
@@ -19,4 +20,6 @@ void Player::update()
 void Player::draw()
 {
     DrawRectangle(m_pos.x, m_pos.y, 100, 100, GREEN);
+    DrawLine(m_pos.x, m_pos.y, m_pos.x + 100, m_pos.y, GREEN);
 }
+
