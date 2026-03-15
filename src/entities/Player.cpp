@@ -20,7 +20,6 @@ Player::Player(Vector2 pos)
 
 Player::~Player()
 {
-    UnloadTexture(m_texture);
 }
 
 void Player::update()

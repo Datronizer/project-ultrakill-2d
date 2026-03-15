@@ -4,13 +4,14 @@
 
 #include <raylib.h>
 #include "entities/Entity.h"
+#include "entities/Player.h"
 
 class PhysicsSystem
 {
     public:
         PhysicsSystem();
 
-        void update(class EntityManager &manager);
+        void update(class EntityManager &manager, Player &player);
         void draw();
 
     private:

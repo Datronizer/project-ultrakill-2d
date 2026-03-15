@@ -20,13 +20,11 @@ int main()
 
     SetTargetFPS(Constants::TARGET_FPS);
 
-
     // Main game loop
     while (!WindowShouldClose())
     {
         // Update
-        game.update();  // TODO: this might do weird things with physics since its not fixed timestep
-        game.draw();
+        game.update(); // TODO: this might do weird things with physics since its not fixed timestep
 
         // --- Update goes here
         // ---
@@ -42,12 +40,9 @@ int main()
 
         ClearBackground(RAYWHITE);
 
-        // string textPlayerPos = "Player Position: " + to_string(player.getPos().x) + ", " + to_string(player.getPos().y);
+        game.draw();
 
         DrawText("Hello World!", 190, 200, 20, LIGHTGRAY);
-        // DrawText(textPlayerPos.c_str(), 190, 230, 20, GRAY);
-
-        // DrawCircleV(player.getPos(), 40, RED);
 
         EndDrawing();
         // ---

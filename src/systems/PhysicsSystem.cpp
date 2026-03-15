@@ -4,9 +4,9 @@
 
 PhysicsSystem::PhysicsSystem() : m_gravity_factor(Constants::GRAVITY) {} // pixels/sec^2 (tune to taste)
 
-void PhysicsSystem::update(EntityManager &manager)
+void PhysicsSystem::update(EntityManager &manager, Player &player)
 {
-    const float dt = 1.0f / Constants::TARGET_FPS;
+    applyGravity(player);
     for (auto &ePtr : manager.getEntities())
     {
         if (ePtr)
@@ -16,7 +16,7 @@ void PhysicsSystem::update(EntityManager &manager)
 
 void PhysicsSystem::applyGravity(Entity &entity)
 {
-    // entity.m_pos.y += m_gravity_factor * (1.0f / Constants::TARGET_FPS);
+    entity.m_pos.y += m_gravity_factor * GetFrameTime();
 }
 
 void PhysicsSystem::draw()

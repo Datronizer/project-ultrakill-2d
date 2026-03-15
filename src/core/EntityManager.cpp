@@ -39,15 +39,6 @@ void EntityManager::removeAllEntities()
     m_entities.clear();
 }
 
-void EntityManager::addPlayer(const Player &player)
-{
-    m_player = player;
-}
-void EntityManager::removePlayer()
-{
-    // TODO
-}
-
 void EntityManager::update()
 {
     for (auto &entity : m_entities)
@@ -67,8 +58,4 @@ std::vector<std::unique_ptr<Entity>> &EntityManager::getEntities()
 {
     // TODO: insert return statement here
     return m_entities;
-}
-const Player &EntityManager::getPlayer() const
-{
-    return m_player;
 }

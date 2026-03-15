@@ -3,7 +3,7 @@
 
 
 #include <raylib.h>
-#include "Entity.h"
+#include "entities/Entity.h"
 
 class Player : public Entity
 {

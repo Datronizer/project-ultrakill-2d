@@ -10,8 +10,6 @@ Game::Game()
     // Initialize entities
     this->m_player = Player();
 
-    // TODO: temp
-    m_entity_manager.addPlayer(this->m_player);
     m_entity_manager.addEntity(std::make_unique<Enemy>());
 
     // PhysicsSystem physics;
@@ -31,7 +29,7 @@ void Game::update()
     if (IsKeyPressed(KEY_BACKSPACE)) m_entity_manager.removeEntity();
 
     // Physics
-    m_physics.update(m_entity_manager);
+    m_physics.update(m_entity_manager, m_player);
 }
 
 void Game::draw()
