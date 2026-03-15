@@ -6,3 +6,7 @@ CppProperties.json
 
 # VS Code stuff
 /.vscode
+
+# Compiled game
+game
+game.exe

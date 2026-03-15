@@ -1,7 +1,11 @@
 # Compiling
 CC = g++
 CFLAGS = -I./include/
-LDFLAGS = -lraylib 
+ifeq ($(OS), Windows_NT)
+    LDFLAGS = -L./lib -lraylibdll
+else
+    LDFLAGS = -lraylib
+endif
 
 # Dirs
 SRC_DIR = src
