@@ -1,19 +1,25 @@
 #include "core/Game.h"
+#include "core/Constants.h"
 
 Game::Game()
 {
-    // Systems
-
     // Managers
     this->m_entity_manager = EntityManager();
 
-    // Initialize entities
+    // Entities
     this->m_player = Player();
 
     m_entity_manager.addEntity(std::make_unique<Enemy>());
 
-    // PhysicsSystem physics;
-    // LevelManager level_manager;
+    // Floor position must match Floor::draw()
+    m_floor.m_pos = { 50, Constants::SCREEN_HEIGHT - 100.0f };
+
+    // Attach colliders
+    m_player_collider = Collider(&m_player, { 0, 0, 32, 32 });
+    m_floor_collider  = Collider(&m_floor,  { 0, 0, Constants::SCREEN_WIDTH - 100.0f, 80 });
+    m_floor_collider.m_static = true;
+    m_collider_system.attachCollider(m_player_collider, m_player);
+    m_collider_system.attachCollider(m_floor_collider,  m_floor);
 }
 
 
@@ -37,6 +43,7 @@ void Game::draw()
     this->m_player.draw();
 
     m_entity_manager.draw();
+    m_floor.draw();
 }
 
 

@@ -5,12 +5,14 @@
 #include <memory>
 #include "entities/Entity.h"
 
+using namespace std;
+
 class EntityManager
 {
     public:
         EntityManager();
 
-        void addEntity(std::unique_ptr<Entity> entity);
+        void addEntity(unique_ptr<Entity> entity);
         void removeEntity();
         void removeEntity(Entity &entity);
         void removeAllEntities();
@@ -18,12 +20,12 @@ class EntityManager
         void update();
         void draw();
 
-        std::vector<std::unique_ptr<Entity>>& getEntities();
+        vector<unique_ptr<Entity>>& getEntities();
 
     private:
         int id_counter = 0;
 
-        std::vector<std::unique_ptr<Entity>> m_entities;
+        vector<unique_ptr<Entity>> m_entities;
 };
 
 
