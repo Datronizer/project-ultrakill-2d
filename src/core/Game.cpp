@@ -36,6 +36,7 @@ void Game::update()
 
     // Physics
     m_physics.update(m_entity_manager, m_player);
+    m_collider_system.update(m_entity_manager, m_player);
 }
 
 void Game::draw()

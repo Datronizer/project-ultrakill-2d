@@ -27,6 +27,7 @@ void ColliderSystem::update(EntityManager &manager, Player &player)
                 DrawText("Collision!", 10, 10, 20, RED);
 
                 // Stop movement on the colliding objects
+                
                 m_colliders[i]->m_owner->m_pos.x = a.x;
                 m_colliders[i]->m_owner->m_pos.y = a.y;
             }

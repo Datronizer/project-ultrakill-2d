@@ -14,9 +14,6 @@ int main()
     InitWindow(screenWidth, screenHeight, "Project 2D Ultrakill");
     Game game;
 
-    // Init player
-    // Player player;
-    // player.setPos(Vector2{ (float)screenWidth / 2, (float)screenHeight / 2 });
 
     SetTargetFPS(Constants::TARGET_FPS);
 
