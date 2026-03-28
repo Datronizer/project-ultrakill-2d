@@ -6,6 +6,7 @@
 
 #include "entities/Entity.h"
 #include "core/Singleton.h"
+#include "core/ObjectPool.h"
 
 using namespace std;
 
@@ -24,10 +25,10 @@ class EntityController : public Singleton<EntityController>
 
         vector<unique_ptr<Entity>>& getEntities();
 
+        static ObjectPool<Entity> *m_entities;
+
     private:
         int id_counter = 0;
-
-        vector<unique_ptr<Entity>> m_entities;
 };
 
 

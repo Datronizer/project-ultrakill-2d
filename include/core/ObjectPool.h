@@ -45,6 +45,13 @@ public:
     /**
      * @brief Returns an object ready for use.
      *        Reuses a released object if one is available, otherwise allocates a new one.
+     * 
+     * All objects in the pool, when allocated for the first time, are sent to m_available
+     * so they can be reused. This is done to avoid repeated new/delete calls.
+     * 
+     * If the pool is empty, a new object is allocated and added to m_pool.
+     * Otherwise, an object from m_available is returned.
+     * 
      * @return Pointer to the object.
      */
     T *GetResource()
@@ -68,6 +75,11 @@ public:
     /**
      * @brief Returns an object back to the pool so it can be reused.
      *        Resets the object's state before marking it as available.
+     * 
+     * After releasing an object, it is instead resetted and added to m_available,
+     * waiting to be reused. That way, the object is not destroyed and remade every time it is
+     * needed, thus avoiding heap fragmentation.
+     * 
      * @param _obj Pointer to the object to release.
      */
     void ReleaseResource(T *_obj)
