@@ -4,18 +4,19 @@
 #include "../include/core/Constants.h"
 
 using namespace std;
+using namespace Constants;
 
 int main()
 {
     // Initialization
-    const int screenWidth = Constants::SCREEN_WIDTH;
-    const int screenHeight = Constants::SCREEN_HEIGHT;
+    const int screenWidth = SCREEN_WIDTH;
+    const int screenHeight = SCREEN_HEIGHT;
 
     InitWindow(screenWidth, screenHeight, "Project 2D Ultrakill");
     Game game;
 
 
-    SetTargetFPS(Constants::TARGET_FPS);
+    SetTargetFPS(TARGET_FPS);
 
     // Main game loop
     while (!WindowShouldClose())

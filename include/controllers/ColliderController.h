@@ -2,17 +2,18 @@
 #define COLLIDERSYSTEM_H
 
 #include <vector>
-#include "core/EntityManager.h"
+#include "./EntityController.h"
 #include "entities/Player.h"
 #include "components/Collider.h"
+#include "core/Singleton.h"
 
-class ColliderSystem
+class ColliderController : public Singleton<ColliderController>
 {
 public:
-    ColliderSystem();
+    ColliderController();
 
     void attachCollider(Collider &collider, GameObject &owner);
-    void update(EntityManager &manager, Player &player);
+    void update(EntityController &manager, Player &player);
 
 private:
     std::vector<Collider *> m_colliders;

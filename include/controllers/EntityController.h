@@ -3,14 +3,16 @@
 
 #include <vector>
 #include <memory>
+
 #include "entities/Entity.h"
+#include "core/Singleton.h"
 
 using namespace std;
 
-class EntityManager
+class EntityController : public Singleton<EntityController>
 {
     public:
-        EntityManager();
+        EntityController();
 
         void addEntity(unique_ptr<Entity> entity);
         void removeEntity();

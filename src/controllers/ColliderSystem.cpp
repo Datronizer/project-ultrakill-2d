@@ -1,19 +1,18 @@
-#include "systems/ColliderSystem.h"
-#include "systems/PhysicsSystem.h"
+#include "controllers/ColliderController.h"
 
-ColliderSystem::ColliderSystem()
+ColliderController::ColliderController()
 {
     m_colliders.reserve(32);
 }
 
-void ColliderSystem::attachCollider(Collider &collider, GameObject &owner)
+void ColliderController::attachCollider(Collider &collider, GameObject &owner)
 {
     collider.m_owner = &owner;
     owner.attachComponent(collider);
     m_colliders.push_back(&collider);
 }
 
-void ColliderSystem::update(EntityManager &manager, Player &player)
+void ColliderController::update(EntityController &manager, Player &player)
 {
     for (size_t i = 0; i < m_colliders.size(); i++)
     {
@@ -27,7 +26,7 @@ void ColliderSystem::update(EntityManager &manager, Player &player)
                 DrawText("Collision!", 10, 10, 20, RED);
 
                 // Stop movement on the colliding objects
-                
+
                 m_colliders[i]->m_owner->m_pos.x = a.x;
                 m_colliders[i]->m_owner->m_pos.y = a.y;
             }

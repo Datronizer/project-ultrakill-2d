@@ -5,10 +5,10 @@
 
 #include "entities/Player.h"
 #include "entities/Enemy.h"
-#include "systems/PhysicsSystem.h"
-#include "systems/ColliderSystem.h"
-#include "core/LevelManager.h"
-#include "core/EntityManager.h"
+#include "controllers/PhysicsController.h"
+#include "controllers/ColliderController.h"
+#include "controllers/LevelController.h"
+#include "controllers/EntityController.h"
 #include "objects/Floor.h"
 #include "components/Collider.h"
 
@@ -28,11 +28,11 @@ class Game
 
     private:
         // Systems
-        PhysicsSystem m_physics;
-        ColliderSystem m_collider_system;
+        PhysicsController* m_physics;
+        ColliderController* m_collider_system;
 
         // Managers
-        EntityManager m_entity_manager;
+        EntityController* m_entity_manager;
 
         // Entities
         Player m_player;
